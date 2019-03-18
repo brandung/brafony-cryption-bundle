@@ -1,0 +1,16 @@
+services:
+  flush.listener:
+    class: Brafony\CryptBundle\EventListener\FlushEventListener
+    arguments:
+      - '@service.configuration.check'
+      - '@service.handle.encryption'
+    tags:
+    - { name: doctrine.event_listener, event: onFlush}
+    - { name: doctrine.event_listener, event: postFlush}
+  load.listener:
+    class: Brafony\CryptBundle\EventListener\LoadEventListener
+    arguments:
+    - '@service.handle.encryption'
+    - '@service.configuration.check'
+    tags:
+    - { name: doctrine.event_listener, event: postLoad}

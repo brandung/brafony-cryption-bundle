@@ -1,0 +1,29 @@
+parameters:
+  encryption:
+    method: 'RSA'
+    service:
+      #Placeholder take a look at ReadMe.md
+    entities:
+      #Placeholder take a look at ReadMe.md
+
+
+##Example for your Parameter.yml##
+
+
+#encryption:
+#  service:
+#    rsa:
+#      password: password for keys
+#      publicKey:  'total path for publicKey'
+#      privateKey: 'total path for privateKey'
+#      prefix: any prefix
+#  entities:
+#    EntityName:
+#      attribute1: null
+#      attribute2: null
+#      attribute3: null
+#    name:
+#      EmbeddedEnitiy:
+#        attribute1: null
+#        attribute2: null
+#        attribute3: null
