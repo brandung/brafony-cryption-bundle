@@ -1,0 +1,12 @@
+services:
+  service.handle.entity:
+    class: Brafony\CryptBundle\Service\HandleEntityService
+  service.configuration.check:
+    class: Brafony\CryptBundle\Service\ConfigurationService
+    arguments: [%encryption%]
+  service.handle.encryption:
+    class: Brafony\CryptBundle\Service\EncryptionHandleService
+    arguments:
+      - '@service.configuration.check'
+      - '@service.handle.entity'
+      - '@service.crypto'

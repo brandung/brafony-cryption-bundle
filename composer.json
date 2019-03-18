@@ -1,0 +1,36 @@
+{
+    "name": "brafony/crypt-bundle",
+    "description": "Symfony3 crypt Bundle  .",
+    "keywords": ["Symfony"],
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Kossin",
+            "email": "oliver.kossin@brandung.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Brafony\\CryptBundle\\": "" }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Brafony\\CryptBundle\\": [
+                "fixtures",
+                "tests"
+            ]
+        }
+    },
+    "prefer-stable": true,
+    "require": {
+        "php": "^7.0.30",
+        "phpseclib/phpseclib": "~2.0"
+
+    },
+    "require-dev": {
+        "symfony/phpunit-bridge": "^3.0",
+        "phpunit/phpunit": "^5.7",
+        "phpstan/phpstan": "^0.8.5",
+        "phpseclib/phpseclib": "~2.0"
+    }
+}

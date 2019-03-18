@@ -1,0 +1,8 @@
+services:
+  service.rsa:
+    class: phpseclib\Crypt\RSA
+  service.crypto:
+    class: Brafony\CryptBundle\Service\Crypto\RSA\CryptService
+    arguments:
+      - '%encryption%'
+      - '@service.rsa'
